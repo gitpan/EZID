@@ -1,9 +1,10 @@
 ---
 abstract: 'Perl interface to EZID API - http://ezid.cdlib.org/doc/apidoc.html'
 author:
-  - 'Koha <koha@>'
+  - 'Julian <julian.maurice@biblibre.com>'
 build_requires:
   ExtUtils::MakeMaker: 0
+  Test::More: 1.001006
 configure_requires:
   ExtUtils::MakeMaker: 0
 dynamic_config: 1
@@ -17,5 +18,7 @@ no_index:
   directory:
     - t
     - inc
-requires: {}
-version: 0.01
+requires:
+  Modern::Perl: 1.20140107
+  String::Random: 0.22
+version: 0.02

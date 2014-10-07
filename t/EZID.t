@@ -1,7 +1,6 @@
 use Modern::Perl;
 use Test::More tests => 9;
 use String::Random qw(random_regex);
-use Data::Dumper;
 
 BEGIN { use_ok('EZID') };
 

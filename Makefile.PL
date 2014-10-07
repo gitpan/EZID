@@ -5,8 +5,14 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME              => 'EZID',
     VERSION_FROM      => 'lib/EZID.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
+    PREREQ_PM         => {
+        'Modern::Perl' => '1.20140107',
+        'String::Random' => '0.22',
+    },
+    TEST_REQUIRES => {
+        'Test::More' => '1.001006',
+    },
     ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
       (ABSTRACT_FROM  => 'lib/EZID.pm', # retrieve abstract from module
-       AUTHOR         => 'Koha <koha@>') : ()),
+       AUTHOR         => 'Julian <julian.maurice@biblibre.com>') : ()),
 );
